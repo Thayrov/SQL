@@ -1,6 +1,23 @@
 -- Crear esquema para la base de datos
 CREATE SCHEMA CRM;
+
 USE CRM;
+
+-- Crear tabla service_category_dim
+CREATE TABLE service_category_dim (
+  service_category_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  category_name VARCHAR(255) NOT NULL UNIQUE,
+  description TEXT NOT NULL
+);
+
+-- Crear tabla service_dim
+CREATE TABLE service_dim (
+  service_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  service_category_id INT NOT NULL,
+  description TEXT NOT NULL,
+  price INT NOT NULL,
+  FOREIGN KEY (service_category_id) REFERENCES service_category_dim(service_category_id)
+);
 
 -- Crear tabla customer_dim
 CREATE TABLE customer_dim (
@@ -21,23 +38,10 @@ CREATE TABLE employee_dim (
   phone VARCHAR(20) UNIQUE DEFAULT 'Not available'
 );
 
--- Crear tabla service_dim
-CREATE TABLE service_dim (
-  service_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  description TEXT NOT NULL,
-  price INT NOT NULL
-);
-
--- Crear tabla service_category_dim
-CREATE TABLE service_category_dim (
-  service_category_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  category_name VARCHAR(255) NOT NULL UNIQUE,
-  description TEXT NOT NULL
-);
-
 -- Crear tabla time_dim
 CREATE TABLE time_dim (
-  date_time DATETIME NOT NULL PRIMARY KEY,
+  id_time_dim INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  date_time DATETIME NOT NULL,
   year INT NOT NULL,
   month INT NOT NULL,
   day INT NOT NULL,
@@ -52,22 +56,22 @@ CREATE TABLE interaction_fact (
   customer_id INT NOT NULL,
   employee_id INT NOT NULL,
   service_id INT NOT NULL,
-  date_time DATETIME NOT NULL,
+  id_time_dim INT NOT NULL,
   type VARCHAR(255) NOT NULL,
   FOREIGN KEY (customer_id) REFERENCES customer_dim(customer_id),
   FOREIGN KEY (employee_id) REFERENCES employee_dim(employee_id),
   FOREIGN KEY (service_id) REFERENCES service_dim(service_id),
-  FOREIGN KEY (date_time) REFERENCES time_dim(date_time)
+  FOREIGN KEY (id_time_dim) REFERENCES time_dim(id_time_dim)
 );
 
 -- Crear tabla purchase_fact
 CREATE TABLE purchase_fact (
   purchase_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   customer_id INT NOT NULL,
-  date_time_purchase DATETIME NOT NULL,
+  date_time_purchase INT NOT NULL,
   total INT NOT NULL,
   FOREIGN KEY (customer_id) REFERENCES customer_dim(customer_id),
-  FOREIGN KEY (date_time_purchase) REFERENCES time_dim(date_time)
+  FOREIGN KEY (date_time_purchase) REFERENCES time_dim(id_time_dim)
 );
 
 -- Crear tabla purchase_detail_fact
@@ -99,8 +103,8 @@ CREATE TABLE customer_feedback_fact (
   service_id INT NOT NULL,
   rating INT NOT NULL,
   comment TEXT,
-  date_time DATETIME NOT NULL,
+  id_time_dim INT NOT NULL,
   FOREIGN KEY (customer_id) REFERENCES customer_dim(customer_id),
   FOREIGN KEY (service_id) REFERENCES service_dim(service_id),
-  FOREIGN KEY (date_time) REFERENCES time_dim(date_time)
+  FOREIGN KEY (id_time_dim) REFERENCES time_dim(id_time_dim)
 );
