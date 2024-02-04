@@ -8,13 +8,68 @@
 
 ---
 
+## Índice
+
+1. [Introducción](#administración-de-la-relación-con-el-cliente-crm)
+
+   - [Objetivo Principal](#objetivo-principal)
+   - [Objetivo Secundario](#objetivo-secundario)
+   - [Diagrama de entidad relación](#diagrama-de-entidad-relación)
+
+1. [Descripción de Tablas](#descripción-de-tablas)
+
+   - [Customer Dim](#tabla-customer_dim)
+   - [Employee Dim](#tabla-employee_dim)
+   - [Service Dim](#tabla-service_dim)
+   - [Service Category Dim](#tabla-service_category_dim)
+   - [Time Dim](#tabla-time_dim)
+   - [Interaction Fact](#tabla-interaction_fact)
+   - [Purchase Fact](#tabla-purchase_fact)
+   - [Purchase Detail Fact](#tabla-purchase_detail_fact)
+   - [Customer Preferences Dim](#tabla-customer_preferences_dim)
+   - [Customer Feedback Fact](#tabla-customer_feedback_fact)
+   - [Purchase Log](#tabla-purchase_log)
+   - [Feedback Log](#tabla-feedback_log)
+
+1. [Listado de Vistas](#listado-de-vistas)
+
+   - [CustomerDetails](#vista-customerdetails)
+   - [EmployeeInteractions](#vista-employeeinteractions)
+   - [SalesSummary](#vista-salessummary)
+   - [ServicesByCategory](#vista-servicesbycategory)
+   - [CustomerFeedback](#vista-customerfeedback)
+
+1. [Listado de Funciones](#listado-de-funciones)
+
+   - [TotalVentasCliente](#función-totalventascliente)
+   - [CantidadInteraccionesPorTipo](#función-cantidadinteraccionesportipo)
+
+1. [Listado de Stored Procedures](#listado-de-stored-procedures)
+
+   - [OrdenarTabla](#stored-procedure-ordenartabla)
+   - [InsertarEliminarCliente](#stored-procedure-insertareliminarcliente)
+
+1. [Listado de Triggers](#listado-de-triggers)
+   - [Before Purchase Insert](#trigger-before_purchase_insert)
+   - [After Purchase Update](#trigger-after_purchase_update)
+   - [Before Feedback Delete](#trigger-before_feedback_delete)
+   - [After Feedback Insert](#trigger-after_feedback_insert)
+
+---
+
 ### Administración de la Relación con el Cliente (CRM)
 
-**Objetivo Principal:** Diseñar una base de datos para rastrear interacciones con los clientes, preferencias y retroalimentación. Esto incluirá detalles personales, historial de servicios adquiridos, preferencias por vendedor o productos específicos y niveles de satisfacción.
+#### **Objetivo Principal:**
 
-**Objetivo Secundario:** Habilitar marketing personalizado, mejorar el servicio al cliente y aumentar la retención, utilizando los datos para informar estrategias de fidelización y promociones dirigidas.
+Diseñar una base de datos para rastrear interacciones con los clientes, preferencias y retroalimentación. Esto incluirá detalles personales, historial de servicios adquiridos, preferencias por vendedor o productos específicos y niveles de satisfacción.
 
-**Diagrama de entidad relación:** ![Imagen](https://res.cloudinary.com/dhjlbf6xs/image/upload/v1706413954/SQL/CRM_d2vbpo.png)
+#### **Objetivo Secundario:**
+
+Habilitar marketing personalizado, mejorar el servicio al cliente y aumentar la retención, utilizando los datos para informar estrategias de fidelización y promociones dirigidas.
+
+#### **Diagrama de entidad relación:**
+
+![Imagen](https://res.cloudinary.com/dhjlbf6xs/image/upload/v1706413954/SQL/CRM_d2vbpo.png)
 
 Creado en dbdiagram.io, puedes ver más de este diagrama en [dbdiagram.io/d/CRM-65624ae53be1495787ba0867](https://dbdiagram.io/d/CRM-65624ae53be1495787ba0867)
 
