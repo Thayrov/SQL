@@ -1,0 +1,11 @@
+purchase_id,service_id,description,purchase_price
+1,1,Basic software package,300
+2,2,Advanced hardware setup,450
+3,3,Standard consulting session,500
+4,4,Premium support package,300
+5,5,Custom software development,450
+6,6,Professional training session,500
+7,7,Regular maintenance,300
+8,8,System installation,450
+9,9,Network setup and configuration,500
+10,10,Cybersecurity services,300

@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,email,preference_id,notes,rating,comment
+1,John,Doe,john.doe@example.com,1,Prefiere atención rápida,5,Excelente servicio
+2,Jane,Smith,jane.smith@example.com,2,Prefiere productos ecológicos,4,"Buen servicio, pero puede mejorar"
+3,Alice,Johnson,alice.johnson@example.com,3,Le gusta la eficiencia,3,Servicio promedio
+4,Bob,Williams,bob.williams@example.com,4,Prefiere atención personalizada,2,No muy satisfecho con el servicio
+5,Carol,Brown,carol.brown@example.com,5,Busca ofertas,1,Mala experiencia
+6,David,Jones,david.jones@example.com,6,Interesado en nuevos productos,5,Excepcional atención al cliente
+7,Eve,Miller,eve.miller@example.com,7,Prefiere servicios de alta calidad,4,"Buen desempeño, pero con margen de mejora"
+8,Frank,Davis,frank.davis@example.com,8,Interesado en garantías extendidas,3,Satisfactorio
+9,Grace,Garcia,grace.garcia@example.com,9,Prefiere un servicio rápido,2,Decepcionado con el tiempo de respuesta
+10,Henry,Rodriguez,henry.rodriguez@example.com,10,Le gusta la asesoría detallada,1,Experiencia insatisfactoria

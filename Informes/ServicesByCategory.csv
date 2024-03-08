@@ -1,0 +1,19 @@
+category_name,service_id,description,price
+App Development,17,Mobile App Development,350
+Blockchain,20,Blockchain Consulting Service,500
+Cloud Services,13,Cloud Storage Service,100
+Consulting,3,Standard consulting session,150
+CRM Solutions,15,Custom CRM Solutions,300
+Data Analytics,14,Data Analytics Consulting,200
+Development,5,Custom software development,300
+E-commerce Solutions,18,E-commerce Platform Setup,250
+Hardware,2,Advanced hardware setup,200
+Installation,8,System installation,220
+IT Security,16,IT Security Assessment,150
+Maintenance,7,Regular maintenance,120
+Networking,9,Network setup and configuration,200
+Security,10,Cybersecurity services,300
+Software,1,Basic software package,100
+Support,4,Premium support package,250
+Training,6,Professional training session,180
+VR Training,19,Virtual Reality Training,400

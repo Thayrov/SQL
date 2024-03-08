@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,service_id,rating,comment
+1,John,Doe,1,5,Excelente servicio
+2,Jane,Smith,2,4,"Buen servicio, pero puede mejorar"
+3,Alice,Johnson,3,3,Servicio promedio
+4,Bob,Williams,4,2,No muy satisfecho con el servicio
+5,Carol,Brown,5,1,Mala experiencia
+6,David,Jones,6,5,Excepcional atención al cliente
+7,Eve,Miller,7,4,"Buen desempeño, pero con margen de mejora"
+8,Frank,Davis,8,3,Satisfactorio
+9,Grace,Garcia,9,2,Decepcionado con el tiempo de respuesta
+10,Henry,Rodriguez,10,1,Experiencia insatisfactoria

@@ -1,0 +1,11 @@
+employee_id,first_name,last_name,interaction_count,type
+2,Bob,Johnson,1,Venta
+3,Carol,Williams,1,Soporte
+4,David,Brown,1,Consulta
+5,Eve,Jones,1,Consulta
+5,Eve,Jones,1,Venta
+6,Frank,Miller,1,Soporte
+7,Grace,Davis,1,Consulta
+8,Henry,Garcia,1,Venta
+9,Isaac,Wilson,1,Soporte
+10,Jack,Martinez,1,Consulta
